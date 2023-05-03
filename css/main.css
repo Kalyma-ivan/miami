@@ -40,6 +40,7 @@ body, html {
 .slider__wrapper {
     transition: var(--transition)!important;
     will-change: transform;
+    position: relative;
 }
 .slider__item {
     max-height: 75vh;
@@ -105,4 +106,20 @@ body, html {
 }
 .description.hidden p {
     transform: translateY(2vh);
+}
+
+@media (max-width: 600px) {
+    .slider {
+        height: 35%;
+        top: 40vh;
+    }
+    .description {
+        top: 5vh;
+        left: 8vw;
+        max-width: 70vw;
+    }
+    .slider__item.opened {
+        height: 110vw;
+        bottom: 10vh;
+    }
 }
